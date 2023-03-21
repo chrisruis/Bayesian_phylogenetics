@@ -81,4 +81,33 @@ Question 7: What does this suggest about the factors influencing the substitutio
 
 ### Examining ancestor dates
 
+For the final part of the tutorial, we'll examine the ancestor date of the Sydney 2012 variant and what this can tell us about pandemic origins
+
+Click on the Sydney.log file in the top left window to go back to the parameter estimates for the Sydney 2012 variant. The TreeHeight parameter describes the date of the most recent common ancestor of the dataset (i.e. the root of the phylogenetic tree)
+
+The TreeHeight is shown as the number of years since the latest tip in the tree, for example if the date of our latest virus sequence is 2016 and the TreeHeight is 5, the most recent common ancestor date would be 2016-5 = 2011
+
+Click on the TreeHeight parameter:
+
+<img src="_figures/tracer_treeheight.png" width = "500">
+
+The date of the most recent virus in this dataset is 2016.5
+
+```
+Question 8: What is the most likely date of the most recent common ancestor of the tree?
+Question 9: What is the confidence interval around this date?
+```
+
+The Sydney 2012 variant caused a pandemic that started in 2012. What factor was the proximate driver of this pandemic? As the virus was already circulating in humans, there are two previous hypotheses:
+1) The pandemic was driven by a genetic change in the virus that enabled it to spread rapidly (e.g. an immune evasion mutation)
+2) The pandemic was driven by a change in the human population that enabled rapid transmission of a virus that was already present
+
+The most recent common ancestor date can help us to distinguish between these two possibilities. If the pandemic was driven by a genetic change in the virus, we'd expect the most recent common ancestor of the pandemic variant to occur shortly before the pandemic occurred, as the virus would acquire the mutation and then spread rapidly
+
+However, if the pandemic was driven by a change in the human population, the most recent common ancestor of the pandemic variant might occur many years before the pandemic
+
+```
+Question 10: Given the most recent common ancestor date you inferred for Sydney 2012 above, can you infer whether the pandemic was most likely driven by a virus mutation or a change in the human population?
+```
+
 We'll use previous BEAST runs (full details about the models and priors are in the 'Model setup' at the bottom of the tutorial) and first analyse log files which record the estimates of each parameter during the MCMC chain
