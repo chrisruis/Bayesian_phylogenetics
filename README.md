@@ -31,10 +31,21 @@ BEAST was run using a relaxed lognormal clock model. This employs a lognormal pr
 
 There are 2 key parameters in the log file related to the substitution rate:
 * ucldMean - the mean substitution rate
-* ucldStdev - the standard deviation of the substitution rate distribution across phylogenetic branches. If this is 0, there is no rate variation between branches (i.e. a strict clock)
+* ucldStdev - the standard deviation of the substitution rate distribution across phylogenetic branches. If this is 0, there is no rate variation between branches (i.e. a strict clock). If the confidence interval doesn't overlap 0, it provides support for at least some rate variation and therefore a relaxed clock
 
 Click on ucldMean.norovirus on the left hand side. You should see the parameter estimates and distribution on the right hand side:
 
 <img src="_figures/tracer_ucldMean.png" width = "500">
+
+```
+Question 2: What is the mean substitution rate?
+Question 3: What is the confidence interval around this rate? Does this enable us to be certain about the rate?
+```
+
+Now click on ucldStdev.norovirus
+
+```
+Question 4: Does the confidence interval of the ucldStdev overlap 0? Does this support application of a relaxed clock model?
+```
 
 We'll use previous BEAST runs (full details about the models and priors are in the 'Model setup' at the bottom of the tutorial) and first analyse log files which record the estimates of each parameter during the MCMC chain
