@@ -110,4 +110,16 @@ However, if the pandemic was driven by a change in the human population, the mos
 Question 10: Given the most recent common ancestor date you inferred for Sydney 2012 above, can you infer whether the pandemic was most likely driven by a virus mutation or a change in the human population?
 ```
 
-We'll use previous BEAST runs (full details about the models and priors are in the 'Model setup' at the bottom of the tutorial) and first analyse log files which record the estimates of each parameter during the MCMC chain
+### Examining ancestor dates with FigTree
+
+Tracer can only show us the estimated date for the most recent common ancestor of the dataset. We can examine the dates of other nodes in the tree by using FigTree
+
+In addition to the log file, BEAST also outputs a file containing a posterior distribution of trees estimated during the MCMC chain. BEAST can extract the maximum clade credibility (MCC) tree from this distribution, which is the tree with the maximum product of the posterior clade probabilities
+
+The MCC tree is annotated with summaries from the posterior distribution of trees so we can see, for example, the most likely dates for any node in the tree, including confidence intervals
+
+We'll load the MCC tree for Sydney 2012 into FigTree. To do this, open FigTree, then select File then select Open and select the Sydney.nex. You should see a view like this:
+
+<img src="_figures/figtree_initial.png" width = "500">
+
+We can add heights to the nodes in the tree by clicking the check box next to "Node Labels" on the left hand side. Select the drop down and change Display to height. This shows the height of each node in the tree. To convert the heights to dates, subtract them from the date of the most recent sequence in the dataset
