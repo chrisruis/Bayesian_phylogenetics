@@ -24,7 +24,17 @@ The first thing we need to check when we load a log file is whether the MCMC cha
 We want the ESS scores to be as large as possible. 200 is usually used as the minimum cutoff. If one or more ESS scores are below 200, we need to run the MCMC chain for longer (or start another independent run). The ESS scores are shown for each parameter on the left hand side
 
 ```
-Question 1: Are the ESS scores all over 200? Do they suggest we can use this log file for analysis?
+Question 1: Are the ESS scores all over 200? Do they suggest that the run has converged sufficiently to analyse?
 ```
+
+BEAST was run using a relaxed lognormal clock model. This employs a lognormal prior distribution with a mean value and a standard deviation. The substitution rate for each phylogenetic branch is sampled from this distribution.
+
+There are 2 key parameters in the log file related to the substitution rate:
+* ucldMean - the mean substitution rate
+* ucldStdev - the standard deviation of the substitution rate distribution across phylogenetic branches. If this is 0, there is no rate variation between branches (i.e. a strict clock)
+
+Click on ucldMean.norovirus on the left hand side. You should see the parameter estimates and distribution on the right hand side:
+
+<img src="_figures/tracer_ucldMean.png", width = "500">
 
 We'll use previous BEAST runs (full details about the models and priors are in the 'Model setup' at the bottom of the tutorial) and first analyse log files which record the estimates of each parameter during the MCMC chain
