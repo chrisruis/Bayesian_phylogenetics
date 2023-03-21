@@ -15,6 +15,6 @@ When you open Tracer, you should see a window similar to this:
 
 To load a log file, click the plus sign in the top left corner (below "No file selected"). Open "Sydney.log" which contains the output from BEAST runs on sequences from the Sydney 2012 norovirus variant. This variant caused a pandemic in 2012. Tracer should now look like this:
 
-<img src="_figures/tracer_loaded.png", width = "500">
+<img src="_figures/tracer_loaded.png" width = "500">
 
 We'll use previous BEAST runs (full details about the models and priors are in the 'Model setup' at the bottom of the tutorial) and first analyse log files which record the estimates of each parameter during the MCMC chain
