@@ -48,4 +48,20 @@ Now click on ucldStdev.norovirus
 Question 4: Does the confidence interval of the ucldStdev overlap 0? Does this support application of a relaxed clock model?
 ```
 
+We've now seen how to examine substitution rates in BEAST output. We can also compare substitution rates between different datasets using Tracer. We'll compare the substitution rate of the Sydney 2012 variant we've already examined with another norovirus variant, New Orleans 2009 which caused a pandemic in 2009
+
+Within the same Tracer window, click again on the plus sign in the top left corner and open "New_Orleans.log". This should open the second log file and keep the first file open, resulting in a view like this:
+
+<img src="_figures/tracer_files.png" width = "500">
+
+By clicking on files in the small window in the top left corner, we can choose which file to display. When we opened New_Orleans.log, this file is automatically selected to display. Let's first examine the ESS scores of the New Orleans 2009 run
+
+```
+Question 5: Do the ESS scores suggest that the run has converged sufficiently to analyse?
+```
+
+To compare multiple log files, we need to select them in the top left window. Click on Sydney.log, then hold shift and click on New_Orleans.log. This selects both files. You should see the bottom left window change - the Mean and ESS estimates change to n/a as we have multiple runs selected. The window should look like this:
+
+<img src="_figures/tracer_multiple_ucldMean.png" width = "500">
+
 We'll use previous BEAST runs (full details about the models and priors are in the 'Model setup' at the bottom of the tutorial) and first analyse log files which record the estimates of each parameter during the MCMC chain
