@@ -35,6 +35,6 @@ There are 2 key parameters in the log file related to the substitution rate:
 
 Click on ucldMean.norovirus on the left hand side. You should see the parameter estimates and distribution on the right hand side:
 
-<img src="_figures/tracer_ucldMean.png", width = "500">
+<img src="_figures/tracer_ucldMean.png" width = "500">
 
 We'll use previous BEAST runs (full details about the models and priors are in the 'Model setup' at the bottom of the tutorial) and first analyse log files which record the estimates of each parameter during the MCMC chain
