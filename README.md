@@ -122,4 +122,27 @@ We'll load the MCC tree for Sydney 2012 into FigTree. To do this, open FigTree, 
 
 <img src="_figures/figtree_initial.png" width = "500">
 
-We can add heights to the nodes in the tree by clicking the check box next to "Node Labels" on the left hand side. Select the drop down and change Display to height. This shows the height of each node in the tree. To convert the heights to dates, subtract them from the date of the most recent sequence in the dataset
+We're often interested to infer the dates of specific internal nodes within the phylogenetic tree. These nodes might correspond to, for example, introduction of the virus into a new geographical region or acquisition of a new mutation. By inferring the dates of specific nodes, we can infer the range of dates during which these events occurred
+
+As an example, we'll examine the date of this node in the tree:
+
+<img src="_figures/figtree_node.png" width = "500">
+
+We can first examine whether the node is well supported, which it should be if we're going to examine it further. To check this, we need to turn node labels on. Click the check box next to "Node Labels" on the left hand side. You should see labels appear on each of the nodes in the tree:
+
+<img src="_figures/figtree_labels.png" width = "500">
+
+We assess node support through the "posterior" node label which shows the proportion of phylogenetic trees in the posterior distribution in which the node is present. We can change the node labels to posterior supports by clicking the drop down to the left of "Node Labels" and changing the "Display" drop down to "posterior"
+
+Depending on the application, different cutoffs for minimum posterior support are commonly applied, including 0.7, 0.9 and 0.95
+
+```
+Question 11: What is the posterior support on the node of interest? Is the node well supported?
+```
+
+We can now examine the date of the node. Updating the node label "Display" to height shows the number of years between the node and the most recent sequence in the dataset. Again, we calculate the date by subtracting the height from the most recent sequence date (2016.5 in this case). The "height\_95%\_HPD" display shows the confidence interval of the height of the node
+
+```
+Question 12: What is the most likely date of the node of interest?
+Question 13: What are the confidence intervals of this date?
+```
