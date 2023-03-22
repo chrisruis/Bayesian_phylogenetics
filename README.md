@@ -112,7 +112,7 @@ Question 10: Given the most recent common ancestor date you inferred for Sydney 
 
 ### Examining ancestor dates with FigTree
 
-Tracer can only show us the estimated date for the most recent common ancestor of the dataset. We can examine the dates of other nodes in the tree by using FigTree
+Tracer will normally only show us the estimated date for the most recent common ancestor of the dataset. We can examine the dates of other nodes in the tree by using FigTree
 
 In addition to the log file, BEAST also outputs a file containing a posterior distribution of trees estimated during the MCMC chain. BEAST can extract the maximum clade credibility (MCC) tree from this distribution, which is the tree with the maximum product of the posterior clade probabilities. This is the tree most commonly used for examination and publication figures
 
