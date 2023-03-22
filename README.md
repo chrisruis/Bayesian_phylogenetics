@@ -118,11 +118,11 @@ In addition to the log file, BEAST also outputs a file containing a posterior di
 
 The MCC tree is annotated with summaries from the posterior distribution of trees so we can see, for example, the most likely dates for any node in the tree, including confidence intervals
 
+We're often interested to infer the dates of specific internal nodes. These nodes might correspond to, for example, introduction of the virus into a new geographical region or acquisition of a new mutation. By inferring the dates of specific nodes, we can infer the range of dates during which these events occurred
+
 We'll load the MCC tree for Sydney 2012 into FigTree. To do this, open FigTree, then select File then select Open and select "Sydney.nex". You should see a view like this:
 
 <img src="_figures/figtree_initial.png" width = "500">
-
-We're often interested to infer the dates of specific internal nodes within the phylogenetic tree. These nodes might correspond to, for example, introduction of the virus into a new geographical region or acquisition of a new mutation. By inferring the dates of specific nodes, we can infer the range of dates during which these events occurred
 
 As an example, we'll examine the date of the starred node in the tree:
 
