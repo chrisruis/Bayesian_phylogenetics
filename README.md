@@ -124,7 +124,7 @@ We'll load the MCC tree for Sydney 2012 into FigTree. To do this, open FigTree, 
 
 We're often interested to infer the dates of specific internal nodes within the phylogenetic tree. These nodes might correspond to, for example, introduction of the virus into a new geographical region or acquisition of a new mutation. By inferring the dates of specific nodes, we can infer the range of dates during which these events occurred
 
-As an example, we'll examine the date of this node in the tree:
+As an example, we'll examine the date of the starred node in the tree:
 
 <img src="_figures/figtree_node.png" width = "500">
 
