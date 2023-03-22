@@ -25,7 +25,7 @@ The parameters of the model that we can examine within Tracer are shown on the l
 
 The first thing we need to check when we load a log file is whether the MCMC chain has converged. If it hasn't, we can't currently analyse the output as the estimates may not be reliable. We assess convergence by examining the effective sample size (ESS) scores, which are the number of effectively independent draws from the posterior distribution that the Markov chain is equivalent to
 
-We want the ESS scores to be as large as possible. 200 is usually used as the minimum cutoff. If one or more ESS scores are below 200, we need to run the MCMC chain for longer (or start another independent run). The ESS scores are shown for each parameter on the left hand side
+We want the ESS scores to be as large as possible. 200 is usually used as the minimum cutoff. If one or more ESS scores are below 200, we need to run the MCMC chain for longer (or start another independent run and combine). The ESS scores are shown for each parameter on the left hand side
 
 ```
 Question 1: Are the ESS scores all over 200? Do they suggest that the run has converged sufficiently to analyse?
@@ -68,7 +68,7 @@ By clicking on files in the small window in the top left corner, we can choose w
 Question 5: Do the ESS scores suggest that the run has converged sufficiently to analyse?
 ```
 
-To compare multiple log files, we need to select them in the top left window. Click on Sydney.log, then hold shift and click on New_Orleans.log. This selects both files. You should see the bottom left window change - the Mean and ESS estimates change to n/a as we have multiple runs selected. The window should look like this:
+To compare multiple log files, we need to select them in the top left window. Click on Sydney.log, then hold shift and click on New_Orleans.log. This selects both files. You should see the bottom left window change - the Mean and ESS estimates change to n/a as we have multiple runs selected. Then click ucldMean.norovirus to display summaries of this parameter for both datasets. The window should look like this:
 
 <img src="_figures/tracer_multiple_ucldMean.png" width = "500">
 
@@ -94,7 +94,7 @@ Click on the TreeHeight parameter:
 The date of the most recent virus in this dataset is 2016.5
 
 ```
-Question 8: What is the most likely date of the most recent common ancestor of the tree?
+Question 8: What is the mean date of the most recent common ancestor of the tree?
 Question 9: What is the confidence interval around this date?
 ```
 
@@ -114,11 +114,11 @@ Question 10: Given the most recent common ancestor date you inferred for Sydney 
 
 Tracer can only show us the estimated date for the most recent common ancestor of the dataset. We can examine the dates of other nodes in the tree by using FigTree
 
-In addition to the log file, BEAST also outputs a file containing a posterior distribution of trees estimated during the MCMC chain. BEAST can extract the maximum clade credibility (MCC) tree from this distribution, which is the tree with the maximum product of the posterior clade probabilities
+In addition to the log file, BEAST also outputs a file containing a posterior distribution of trees estimated during the MCMC chain. BEAST can extract the maximum clade credibility (MCC) tree from this distribution, which is the tree with the maximum product of the posterior clade probabilities. This is the tree most commonly used for examination and publication figures
 
 The MCC tree is annotated with summaries from the posterior distribution of trees so we can see, for example, the most likely dates for any node in the tree, including confidence intervals
 
-We'll load the MCC tree for Sydney 2012 into FigTree. To do this, open FigTree, then select File then select Open and select the Sydney.nex. You should see a view like this:
+We'll load the MCC tree for Sydney 2012 into FigTree. To do this, open FigTree, then select File then select Open and select "Sydney.nex". You should see a view like this:
 
 <img src="_figures/figtree_initial.png" width = "500">
 
